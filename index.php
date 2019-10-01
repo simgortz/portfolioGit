@@ -14,7 +14,7 @@ ini_set('include_path', ROOT . '/subpages/');
 ?>
     
 <!doctype html>
-<html>
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <link rel="stylesheet" type="text/css" href="style/reset.css">
@@ -27,9 +27,10 @@ ini_set('include_path', ROOT . '/subpages/');
     <body>
         <div id="header" class="<?php echo $page;?>">
             <ul id="topMenu">
-                <a class="orange" href="index.php"><li>About me</li></a>
-                <a class="green" href="index.php?page=studywork"><li>Study work</li></a>
-                <a class="blue" href="index.php?page=otherprojects"><li>Other projects</li></a>
+               
+                <li><a class="orange" href="index.php">About me</a></li>
+                <li><a class="green" href="index.php?page=studywork">Study work</a></li>
+                <li><a class="blue" href="index.php?page=otherprojects">Other projects</a></li>
             </ul>
         </div>
         

@@ -67,19 +67,36 @@ bodyFraGamleDoc{
     max-width: var(--content-max-width);
     margin: auto;
 }
-
+/*
 #topMenu li{
     display:inline-block;
     padding: 10px 20px;
-    font-size: var(--menu-font-size);
+}
+
+#topMenu li a{
+    display: block;
 }
 
 #topMenu li:hover{
     text-decoration: underline;
 }
+*/
+
+#topMenu li a{
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: var(--menu-font-size);
+}
+
+#topMenu li a:hover{
+    text-decoration: underline;
+}
+
+
 
 /* Underline menu link to current page */
-.aboutme .orange li, .studywork .green li, .otherprojects .blue li{
+.aboutme .orange, .studywork .green, .otherprojects .blue{
     background-color: var(--customGreyDark);
 }
 
