@@ -58,6 +58,7 @@ bodyFraGamleDoc{
     position: fixed;
     width:100%;
     background-image: var(--customGradient);
+    top:0;
 }
 
 #topMenu{
@@ -83,6 +84,7 @@ bodyFraGamleDoc{
 }
 
 #content{
+    margin-top:50px;
     height: 5000px;
 }
 

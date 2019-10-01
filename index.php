@@ -1,18 +1,18 @@
-
-    <?php
-    if(isset($_GET['page'])){
-        $page = $_GET['page'];
-        if(($page !== 'studywork') && ($page !== 'otherprojects')){
-            $page = 'aboutme';
-        }
-    }else{
+<?php
+if(isset($_GET['page'])){
+    $page = $_GET['page'];
+    if(($page !== 'studywork') && ($page !== 'otherprojects')){
         $page = 'aboutme';
     }
-    ?>
-    
-    
+}else{
+    $page = 'aboutme';
+}
 
+define('ROOT', $_SERVER['DOCUMENT_ROOT']);
+ini_set('include_path', ROOT . '/subpages/');
 
+?>
+    
 <!doctype html>
 <html>
     <head>
@@ -34,7 +34,11 @@
         </div>
         
         <div id="content">
-            test
+            <?php
+            
+            include($page . '.php');
+            
+            ?>
         </div>
         <div id="footer">
             test
