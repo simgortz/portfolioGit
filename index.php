@@ -20,10 +20,14 @@ ini_set('include_path', ROOT . '/subpages/');
         <link rel="stylesheet" type="text/css" href="style/reset.css">
         <link rel="stylesheet" type="text/css" href="style/stylesheet.css">
         <link rel="stylesheet" href="https://use.typekit.net/cbx2oqw.css">
-        <title>Simon Gørtz</title>
+        <title>Simon Gørtz<?php
+            if($page == 'studywork'){
+                echo ' - Study Work';
+            }elseif($page == 'otherprojects'){
+                echo ' - Other Projects';
+            }
+            ?></title>
     </head>
-    
-    
     <body>
         <div id="header" class="<?php echo $page;?>">
             <ul id="topMenu">
@@ -44,7 +48,5 @@ ini_set('include_path', ROOT . '/subpages/');
         <div id="footer">
             test
         </div>
-        
-        
     </body>
 </html>

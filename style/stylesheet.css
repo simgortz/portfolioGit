@@ -6,7 +6,7 @@ body{
     --textGrey: #848484;
     --customGrey: #424242;
     --customGreyDark: #333;
-    --customGradient: linear-gradient(#333a, #0000, var(--customGreyDark));
+    --customGradient: linear-gradient(var(--customGreyDark), var(--customGrey), var(--customGreyDark));
 }
 
 /* Standard style */
@@ -21,29 +21,29 @@ body{
     overflow-y: scroll;
     --content-max-width: 1280px;
     --customBorder: 3px solid;
+    --custom-box-shadow: 0px 3px 6px #000;
+    --custom-text-shadow: 0px 3px 3px #000;
 }
 
+h1, p{
+    color: #eeeeee;
+    text-shadow: var(--custom-text-shadow);
+    font-size: 20px;
+}
 
-bodyFraGamleDoc{
-    --customRed: #ff9900;
-    --customGreen: #00cc00;
-    --customBlue: #0099ff;
-    --font-family: quiroh, sans-serif;
-    --font-weight: 200;
-    --menu-font-size: 30px;
-    --max-width: 1280px;
-    --contentPadding: 40px 80px;
+h1{
+    font-size: 70px;
+}
+
+p{
+    display: block;
     line-height: 2;
-    overflow-y: scroll;
-    background-color: var(--customGreyDarkGradient);
-    --customGradient: linear-gradient(#33333355, #0000, var(--customGreyDarkGradient));
 }
 
 
 .orange, .aboutme{
     color: var(--customOrange);
 }
-
 
 .green, .studywork{
     color: var(--customGreen);
@@ -57,8 +57,9 @@ bodyFraGamleDoc{
     border-bottom: var(--customBorder);
     position: fixed;
     width:100%;
-    background-image: var(--customGradient);
+    background:var(--customGradient);
     top:0;
+    box-shadow: var(--custom-box-shadow);
 }
 
 #topMenu{
@@ -67,20 +68,6 @@ bodyFraGamleDoc{
     max-width: var(--content-max-width);
     margin: auto;
 }
-/*
-#topMenu li{
-    display:inline-block;
-    padding: 10px 20px;
-}
-
-#topMenu li a{
-    display: block;
-}
-
-#topMenu li:hover{
-    text-decoration: underline;
-}
-*/
 
 #topMenu li a{
     display: block;
@@ -93,8 +80,6 @@ bodyFraGamleDoc{
     text-decoration: underline;
 }
 
-
-
 /* Underline menu link to current page */
 .aboutme .orange, .studywork .green, .otherprojects .blue{
     background-color: var(--customGreyDark);
@@ -102,6 +87,53 @@ bodyFraGamleDoc{
 
 #content{
     margin-top:50px;
-    height: 5000px;
+    background: url(../media/imgs/desk.jpg) no-repeat top center fixed;
+    background-size: cover;
+}
+
+#aboutMe{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    align-items: center;
+    max-width: var(--content-max-width);
+    margin: auto;
+    padding: 30px 10px;
+}
+
+#aboutMe img{
+    border-radius: 50%;
+    border: var(--customBorder) var(--customOrange);
+    box-shadow: var(--custom-box-shadow);
+    width: 30%;
+    max-width: 450px;
+    
+}
+
+#profileText{
+    display: flex;
+    flex-direction: column;
+    width: 530px;
+    text-align: justify;
+}
+
+@media screen and (max-width: 840px){
+    #aboutMe{
+        flex-direction: column-reverse;
+    }
+    
+    #aboutMe h1{
+        text-align: center;
+    }
+    
+    #profileText{
+        width: 90%;
+        max-width: 530px;
+    }
+    
+    #aboutMe img{
+        width: 90%;
+        max-width: 300px;
+    }
 }
 
