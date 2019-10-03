@@ -26,7 +26,7 @@ body{
     font-size: 20px;
 }
 
-#aboutMeBackground h1,#aboutMeBackground p{
+#aboutMeBackground h1,#aboutMeBackground p, #otherProjectsBackground p{
     color: #eeeeee;
     text-shadow: var(--custom-text-shadow);
 }
@@ -121,13 +121,76 @@ p{
 }
 
 .customWhiteBackground{
-    background: linear-gradient(90deg, #edeeed, #eeeeee, #eaeeea);
+    background: linear-gradient(90deg, #ededed, #eeeeee, #ededed);
 }
 
-#studyWorkText{
-    max-width: 600px;
+.centerTextOnWhite{
+    max-width: 90%;
     margin: auto;
     padding: 60px 10px;
+    text-align: justify;
+}
+
+#otherProjectsBackground{
+    background: linear-gradient(90deg, var(--customGreyDark), #0000 80%, var(--customGreyDark)), url(../media/imgs/mount.jpg) no-repeat 80% 20% fixed;
+    background-size: cover;
+}
+
+
+.centerWrapper{
+    max-width: var(--content-max-width);
+    margin: auto;
+    padding: 10px 60px;
+}
+
+
+#otherProjectsIntro{
+    max-width: 600px;
+    padding: 60px 10px;
+    margin: 0 12%;
+    text-align: justify;
+}
+
+#uiComparison{
+    display: grid;
+    grid-template-columns: 1fr 10px 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "topLeft . topRight"
+        "bottomLeft . bottomRight"
+        ;
+    padding: 0 60px 60px 60px;
+}
+
+#uiComparison p{
+    text-align: justify;
+    width: 90%;
+    margin: auto;
+}
+
+#uiComparison img{
+    box-shadow: 0 3px 6px;
+    margin-bottom: 10px;
+}
+
+#uiComparisonTopRight{
+    grid-area: topRight;
+    width: 100%;
+}
+
+#uiComparisonTopLeft{
+    grid-area: topLeft;
+    width: 100%;
+}
+
+#uiComparisonBottomRight{
+    grid-area: bottomRight;
+    width: 90%;
+}
+
+#uiComparisonBottomLeft{
+    grid-area: bottomLeft;
+    width: 90%;
 }
 
 @media screen and (max-width: 840px){
