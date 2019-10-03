@@ -25,7 +25,7 @@ body{
     --custom-text-shadow: 0px 3px 3px #000;
 }
 
-h1, p{
+#aboutMeBackground h1,#aboutMeBackground p{
     color: #eeeeee;
     text-shadow: var(--custom-text-shadow);
     font-size: 20px;
@@ -87,6 +87,9 @@ p{
 
 #content{
     margin-top:50px;
+}
+
+#aboutMeBackground{
     background: url(../media/imgs/desk.jpg) no-repeat top center fixed;
     background-size: cover;
 }
@@ -115,6 +118,16 @@ p{
     flex-direction: column;
     width: 530px;
     text-align: justify;
+}
+
+.customWhiteBackground{
+    background: linear-gradient(90deg, #edeeed, #eeeeee, #eaeeea);
+}
+
+#studyWorkText{
+    max-width: 600px;
+    margin: auto;
+    padding: 60px 10px;
 }
 
 @media screen and (max-width: 840px){
