@@ -45,8 +45,11 @@ ini_set('include_path', ROOT . '/subpages/');
             
             ?>
         </div>
-        <div id="footer">
-            test
+        <div  class="<?php echo $page;?>" id="footer">
+            <div id="footerContact">
+                <img src="media/icons/mailGreySmall.png">
+                <p>business@simgortz.com</p>
+            </div>
         </div>
     </body>
 </html>
